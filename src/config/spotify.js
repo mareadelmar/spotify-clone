@@ -17,11 +17,14 @@ export const loginURL = `${AUTH_ENDPOINT}?client_id=${CLIENT_ID}&redirect_uri=${
 	"%20"
 )}&response_type=token&show_dialog=true`;
 
-const tokenFromResponse = () => {
-	return window.location.hash.split("&").reduce((initialValue, item) => {
-		let keyValue = item.split("=");
-		initialValue[keyValue[0]] = decodeURIComponent(keyValue[1]);
+export const getTokenFromResponse = () => {
+	return window.location.hash
+		.substring(1)
+		.split("&")
+		.reduce((initialValue, item) => {
+			let keyValue = item.split("=");
+			initialValue[keyValue[0]] = decodeURIComponent(keyValue[1]);
 
-		return initialValue;
-	}, {});
+			return initialValue;
+		}, {});
 };
