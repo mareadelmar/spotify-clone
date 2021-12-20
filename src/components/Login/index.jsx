@@ -1,5 +1,6 @@
 import React from "react";
 import "./Login.css";
+import { loginURL } from "../../config/spotify";
 
 const Login = () => {
 	return (
@@ -8,7 +9,7 @@ const Login = () => {
 				src='https://media.idownloadblog.com/wp-content/uploads/2016/06/Spotify_logo_horizontal_black.jpg'
 				alt='spotify logo'
 			/>
-			<a>LOGIN WITH SPOTIFY</a>
+			<a href={loginURL}>LOGIN WITH SPOTIFY</a>
 		</div>
 	);
 };
