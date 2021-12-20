@@ -10,4 +10,4 @@ export function UserContextProvider({ initialState, reducer, children }) {
 	);
 }
 
-export const userDataValue = () => useContext(UserContext);
+export const userUserData = () => useContext(UserContext);
