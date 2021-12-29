@@ -26,9 +26,10 @@ const Sidebar = () => {
 				<p>
 					<strong className='sidebar-title'>PLAYLISTS</strong>
 					<hr />
-					<SidebarOption title='Hip Hop' />
-					<SidebarOption title='Lo mejor de tu 2021' />
-					<SidebarOption title='Pop 1990' />
+					{playlists &&
+						playlists?.items.map(item => {
+							return <SidebarOption title={item.name} />;
+						})}
 				</p>
 			</div>
 		</section>
