@@ -1,7 +1,7 @@
 export const initialState = {
 	user: null,
 	token: null,
-	playlist: [],
+	playlists: [],
 };
 
 export const reducer = (state, action) => {

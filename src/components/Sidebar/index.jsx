@@ -1,8 +1,12 @@
 import React from "react";
 import "./Sidebar.css";
 import SidebarOption from "../SidebarOption";
+import { useUserData } from "../../context/UserContext";
 
 const Sidebar = () => {
+	const [{ playlists }] = useUserData();
+	console.log("sidebar -->", playlists);
+
 	return (
 		<section className='sidebar-container'>
 			<div className='sidebar-item'>
