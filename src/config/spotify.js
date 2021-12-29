@@ -1,5 +1,3 @@
-console.log("holis", import.meta.env.VITE_SPOTIFY_ID);
-
 export const AUTH_ENDPOINT = "https://accounts.spotify.com/authorize/";
 const CLIENT_ID = import.meta.env.VITE_SPOTIFY_ID;
 const REDIRECT_URI = "http://localhost:3000/";
