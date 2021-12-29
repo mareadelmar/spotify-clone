@@ -1,0 +1,5 @@
+.sidebar-container {
+	min-height: 100vh;
+	border: solid 1px #333;
+	flex: 0.2;
+}
