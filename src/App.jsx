@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import "./App.css";
 import Login from "./components/Login";
 import { getTokenFromResponse } from "./config/spotify";
@@ -14,10 +14,10 @@ function App() {
 	useEffect(() => {
 		const hash = getTokenFromResponse();
 		const _token = hash.access_token;
+		window.location.hash = "";
 
 		if (_token) {
 			spotify.setAccessToken(_token);
-			window.location.hash = "";
 
 			dispatch({
 				type: "SET_TOKEN",
@@ -30,11 +30,6 @@ function App() {
 					payload: userData,
 				});
 			});
-		}
-	}, []);
-
-	useEffect(() => {
-		if (token) {
 			spotify.getUserPlaylists().then(res => {
 				console.log("playlist", res);
 				dispatch({
@@ -43,12 +38,14 @@ function App() {
 				});
 			});
 		}
-	}, [token]);
+	}, [dispatch, token]);
 
-	console.log("user -->", user);
+	// useEffect(() => {
+	// 	if (user) {
+	// 	}
+	// }, [dispatch]);
 
-	console.log("token -->", token);
-	return <div className='App'>{token ? <UserDashboard /> : <Login />}</div>;
+	return <div className='App'>{!token ? <Login /> : <UserDashboard />}</div>;
 }
 
 export default App;

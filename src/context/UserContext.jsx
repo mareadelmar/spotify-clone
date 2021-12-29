@@ -1,6 +1,6 @@
 import { createContext, useContext, useReducer } from "react";
 
-export const UserContext = createContext({});
+export const UserContext = createContext();
 
 export function UserContextProvider({ initialState, reducer, children }) {
 	return (
