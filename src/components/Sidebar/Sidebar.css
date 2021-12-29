@@ -13,3 +13,18 @@
 	width: 100%;
 	text-align: center;
 }
+
+.sidebar-item {
+	margin-top: 2.5em;
+}
+
+.sidebar-title {
+	padding-left: 0.75em;
+	font-size: 12px;
+}
+
+.sidebar-item hr {
+	border: 1px solid #282828;
+	width: 90%;
+	margin: 0.75em auto;
+}
