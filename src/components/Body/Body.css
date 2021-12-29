@@ -1,3 +1,6 @@
 .body-container {
 	flex: 0.8;
+	min-height: 100vh;
+	background: linear-gradient(rgba(91, 87, 115), rgba(0, 0, 0, 1));
+	padding: 1.5em;
 }
