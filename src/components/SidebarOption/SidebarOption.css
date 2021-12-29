@@ -1,0 +1,17 @@
+.sidebarOption-container {
+	height: 2.5em;
+	cursor: pointer;
+	color: grey;
+	transition: 200ms color ease-in;
+	display: flex;
+	align-items: center;
+}
+
+.sidebarOption-container:hover {
+	color: white;
+}
+
+.sidebarOption-icon {
+	font-size: 2em;
+	margin-right: 0.5em;
+}

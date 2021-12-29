@@ -12,6 +12,7 @@
     "spotify-web-api-js": "^1.5.2"
   },
   "devDependencies": {
+    "@iconify/react": "^3.1.0",
     "@vitejs/plugin-react": "^1.0.7",
     "vite": "^2.7.2"
   }
