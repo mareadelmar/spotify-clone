@@ -30,6 +30,13 @@ function App() {
 					payload: userData,
 				});
 			});
+
+			spotify.getUserPlaylists.then(res => {
+				dispatch({
+					type: "SET_PLAYLISTS",
+					payload: res,
+				});
+			});
 		}
 	}, []);
 
