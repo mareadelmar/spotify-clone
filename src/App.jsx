@@ -24,6 +24,11 @@ function App() {
 				payload: _token,
 			});
 
+			dispatch({
+				type: "SET_SPOTIFY",
+				payload: spotify,
+			});
+
 			spotify.getMe().then(userData => {
 				dispatch({
 					type: "GET_USER",
@@ -39,11 +44,6 @@ function App() {
 			});
 		}
 	}, [dispatch, token]);
-
-	// useEffect(() => {
-	// 	if (user) {
-	// 	}
-	// }, [dispatch]);
 
 	return <div className='App'>{!token ? <Login /> : <UserDashboard />}</div>;
 }

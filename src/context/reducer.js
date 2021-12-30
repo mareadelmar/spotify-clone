@@ -23,6 +23,11 @@ export const reducer = (state, action) => {
 				...state,
 				playlists: action.payload,
 			};
+		case "SET_SPOTIFY":
+			return {
+				...state,
+				spotify: action.payload,
+			};
 
 		default:
 			return state;
