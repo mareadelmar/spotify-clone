@@ -6,6 +6,7 @@
 	background-color: #282828;
 	padding: 1em;
 	justify-content: space-between;
+	color: #b3b3b3;
 }
 
 .player-album {
@@ -32,6 +33,13 @@
 
 .player-controls > svg {
 	font-size: 24px;
+	cursor: pointer;
+}
+
+.player-controls > svg:hover {
+	transition: transform 0.2s ease-in-out;
+	transform: scale(1.1);
+	color: white;
 }
 
 #play-icon {
@@ -45,5 +53,13 @@
 }
 
 .player-volume svg {
-	font-size: 16px;
+	cursor: pointer;
+}
+
+.MuiSlider-root {
+	color: #b3b3b3 !important;
+}
+
+.MuiSlider-root:hover {
+	color: #1db954 !important;
 }
