@@ -4,3 +4,27 @@
 	background: linear-gradient(rgba(91, 87, 115), rgba(0, 0, 0, 1));
 	padding: 1.5em;
 }
+
+.body-discover {
+	margin-top: 2em;
+}
+
+.discover-img {
+	width: 16vw;
+	margin: 0 1.25em;
+	box-shadow: 0 4px 60px rgba(0, 0, 0, 0.5);
+}
+
+.discover-text {
+	justify-content: flex-end;
+	margin-left: 0.75em;
+}
+
+.discover-text > p {
+	padding: 0.25em 0;
+}
+
+.discover-text > h3 {
+	font-size: 48px;
+	padding: 0.25em 0;
+}
