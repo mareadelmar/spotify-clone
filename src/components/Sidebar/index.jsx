@@ -26,12 +26,12 @@ const Sidebar = () => {
 			<div className='sidebar-item'>
 				<p>
 					<strong className='sidebar-title'>PLAYLISTS</strong>
-					<hr />
-					{playlists &&
-						playlists.items?.map(item => {
-							return <SidebarOption title={item.name} />;
-						})}
 				</p>
+				<hr />
+				{playlists &&
+					playlists.items?.map(item => {
+						return <SidebarOption title={item.name} />;
+					})}
 			</div>
 		</section>
 	);
