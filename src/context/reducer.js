@@ -28,6 +28,11 @@ export const reducer = (state, action) => {
 				...state,
 				spotify: action.payload,
 			};
+		case "SET_DISCOVER_WEEKLY":
+			return {
+				...state,
+				discover_weekly: action.payload,
+			};
 
 		default:
 			return state;

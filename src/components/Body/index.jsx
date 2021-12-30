@@ -1,15 +1,18 @@
 import React from "react";
 import "./Body.css";
 import BodyHeader from "../BodyHeader";
+import { useUserData } from "../../context/UserContext";
 
 const Body = () => {
+	const [{ discover_weekly }] = useUserData();
+
 	return (
 		<section className='body-container'>
 			<BodyHeader />
 
 			<div className='body-discover flex'>
 				<img
-					src='https://i.scdn.co/image/ab67616d0000b2739e569e2250c16f6089a61cca'
+					src={discover_weekly.images[0].url}
 					alt=''
 					className='discover-img'
 				/>
@@ -18,11 +21,7 @@ const Body = () => {
 						<strong>PLAYLISTS</strong>
 					</p>
 					<h3>Discover Weekly</h3>
-					<p>
-						Lorem ipsum dolor sit amet consectetur, adipisicing
-						elit. Ad voluptatibus suscipit fuga nesciunt. Possimus
-						tenetur reiciendis nisi.
-					</p>
+					<p>{discover_weekly?.description}</p>
 				</div>
 			</div>
 		</section>
