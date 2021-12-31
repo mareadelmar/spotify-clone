@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Body.css";
 import BodyHeader from "../BodyHeader";
 import { useUserData } from "../../context/UserContext";
+import { Icon } from "@iconify/react";
+//import SongItem from "../SongItem";
 
 const Body = () => {
 	const [{ discover_weekly }] = useUserData();

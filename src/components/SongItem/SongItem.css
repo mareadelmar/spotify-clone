@@ -1,0 +1,9 @@
+.song-container {
+	margin-left: 1em;
+	padding: 1em;
+}
+
+.song-container {
+	cursor: pointer;
+	opacity: 0.8;
+}
