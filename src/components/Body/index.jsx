@@ -18,11 +18,24 @@ const Body = () => {
 				/>
 				<div className='discover-text flex flex-column'>
 					<p>
-						<strong>PLAYLISTS</strong>
+						<strong>PLAYLIST</strong>
 					</p>
 					<h3>Discover Weekly</h3>
 					<p>{discover_weekly?.description}</p>
 				</div>
+			</div>
+
+			<div className='body-songs'>
+				<div className='songs-icons flex align-center'>
+					<Icon icon='bi:play-circle' />
+					<Icon icon='bi:heart' />
+					<Icon icon='bi:three-dots' />
+				</div>
+
+				{/* {discover_weekly?.tracks?.items.map(item => {
+					//return <SongItem track={item.track} />;
+					console.log("track -->", item.track);
+				})} */}
 			</div>
 		</section>
 	);

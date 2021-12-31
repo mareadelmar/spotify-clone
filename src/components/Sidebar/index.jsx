@@ -6,8 +6,6 @@ import { useUserData } from "../../context/UserContext";
 const Sidebar = () => {
 	const [{ playlists }] = useUserData();
 
-	console.log("sidebar -->", playlists.items);
-
 	return (
 		<section className='sidebar-container'>
 			<div className='sidebar-item'>
@@ -29,7 +27,7 @@ const Sidebar = () => {
 				</p>
 				<hr />
 				{playlists &&
-					playlists.items?.map(item => {
+					playlists.map(item => {
 						return <SidebarOption title={item.name} />;
 					})}
 			</div>

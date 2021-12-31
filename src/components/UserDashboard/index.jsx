@@ -11,10 +11,6 @@ const UserDashboard = () => {
 			<Sidebar />
 			<Body />
 			<Player />
-
-			{/* <SIDEBAR /> --> panel izquierda*/}
-			{/* <BODY />  --> main*/}
-			{/* <PLAYER /> --> footer */}
 		</section>
 	);
 };

@@ -21,10 +21,20 @@
 }
 
 .discover-text > p {
-	padding: 0.25em 0;
+	padding-bottom: 0.5em;
+	color: rgba(255, 255, 255, 0.7);
 }
 
 .discover-text > h3 {
 	font-size: 48px;
-	padding: 0.25em 0;
+	padding-bottom: 0.25em;
+}
+
+.body-songs {
+	margin: 3em 0 2em 2em;
+}
+
+.songs-icons > svg {
+	font-size: 40px;
+	margin-right: 0.5em;
 }

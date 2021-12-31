@@ -4,7 +4,7 @@ import { useUserData } from "../../context/UserContext";
 import { Avatar } from "@material-ui/core";
 
 const BodyHeader = () => {
-	const [{ spotify, user }] = useUserData();
+	const [{ user }] = useUserData();
 
 	return (
 		<header className='header-container'>
