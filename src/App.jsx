@@ -9,7 +9,7 @@ import UserDashboard from "./components/UserDashboard";
 const spotify = new SpotifyWebApi();
 
 function App() {
-	const [{ user, token }, dispatch] = useUserData();
+	const [{ token }, dispatch] = useUserData();
 
 	useEffect(() => {
 		const hash = getTokenFromResponse();
@@ -28,32 +28,38 @@ function App() {
 				type: "SET_SPOTIFY",
 				payload: spotify,
 			});
+		}
+	}, [token, dispatch]);
 
-			spotify.getMe().then(userData => {
-				dispatch({
+	useEffect(() => {
+		if (spotify) {
+			spotify.getMe().then(res => {
+				console.log("get user", res);
+				return dispatch({
 					type: "GET_USER",
-					payload: userData,
+					payload: res,
 				});
 			});
+
 			spotify.getUserPlaylists().then(res => {
-				console.log("playlist", res);
-				dispatch({
+				console.log("get playlist", res);
+				return dispatch({
 					type: "SET_PLAYLISTS",
 					payload: res,
 				});
 			});
 
 			spotify.getPlaylist("37i9dQZEVXcSvqjG5Dwwab").then(res => {
-				console.log("playlist discover", res);
-				dispatch({
+				console.log("get playlist discover", res);
+				return dispatch({
 					type: "SET_DISCOVER_WEEKLY",
 					payload: res,
 				});
 			});
 		}
-	}, [dispatch, token]);
+	}, [spotify, dispatch]);
 
-	return <div className='App'>{!token ? <Login /> : <UserDashboard />}</div>;
+	return <div className='App'>{token ? <UserDashboard /> : <Login />}</div>;
 }
 
 export default App;

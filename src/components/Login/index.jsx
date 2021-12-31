@@ -6,7 +6,7 @@ const Login = () => {
 	return (
 		<div className='login-container'>
 			<img
-				src='https://media.idownloadblog.com/wp-content/uploads/2016/06/Spotify_logo_horizontal_black.jpg'
+				src='https://getheavy.com/wp-content/uploads/2019/12/spotify2019-830x350.jpg'
 				alt='spotify logo'
 			/>
 			<a href={loginURL}>LOGIN WITH SPOTIFY</a>
