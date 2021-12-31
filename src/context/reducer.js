@@ -2,10 +2,12 @@ export const initialState = {
 	user: null,
 	token: null,
 	playlists: [],
+	spotify: null,
+	discover_weekly: null,
 };
 
 export const reducer = (state, action) => {
-	console.log(action);
+	console.log("action -->", action, typeof action.payload);
 
 	switch (action.type) {
 		case "GET_USER":

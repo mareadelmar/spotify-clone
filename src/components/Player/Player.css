@@ -36,7 +36,8 @@
 	cursor: pointer;
 }
 
-.player-controls > svg:hover {
+.player-controls > svg:hover,
+.player-volume svg:hover {
 	transition: transform 0.2s ease-in-out;
 	transform: scale(1.1);
 	color: white;
@@ -54,6 +55,7 @@
 
 .player-volume svg {
 	cursor: pointer;
+	font-size: 24px;
 }
 
 .MuiSlider-root {
