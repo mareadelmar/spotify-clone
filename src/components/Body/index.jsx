@@ -3,7 +3,7 @@ import "./Body.css";
 import BodyHeader from "../BodyHeader";
 import { useUserData } from "../../context/UserContext";
 import { Icon } from "@iconify/react";
-//import SongItem from "../SongItem";
+import SongItem from "../SongItem";
 
 const Body = () => {
 	const [{ discover_weekly }] = useUserData();
@@ -34,10 +34,10 @@ const Body = () => {
 					<Icon icon='bi:three-dots' />
 				</div>
 
-				{/* {discover_weekly?.tracks?.items.map(item => {
-					//return <SongItem track={item.track} />;
+				{discover_weekly?.tracks?.items.map(item => {
 					console.log("track -->", item.track);
-				})} */}
+					return <SongItem track={item.track} id={item.id} />;
+				})}
 			</div>
 		</section>
 	);
