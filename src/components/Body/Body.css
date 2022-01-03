@@ -10,9 +10,11 @@
 }
 
 .discover-img {
-	width: 16vw;
 	margin: 0 1.25em;
 	box-shadow: 0 4px 60px rgba(0, 0, 0, 0.5);
+	aspect-ratio: 4/4;
+	object-fit: contain;
+	max-width: 200px;
 }
 
 .discover-text {
@@ -32,6 +34,10 @@
 
 .body-songs {
 	margin: 3em 0 2em 2em;
+}
+
+.songs-icons {
+	margin: 2em;
 }
 
 .songs-icons > svg {

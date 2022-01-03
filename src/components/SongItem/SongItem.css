@@ -3,7 +3,21 @@
 	padding: 1em;
 }
 
-.song-container {
+.song-container:hover {
 	cursor: pointer;
 	opacity: 0.8;
+	background-color: black;
+}
+
+.song-img {
+	width: 40px;
+	height: 40px;
+}
+
+.song-details {
+	margin-left: 1em;
+}
+
+.song-details p {
+	color: rgba(255, 255, 255, 0.7);
 }
