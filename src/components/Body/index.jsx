@@ -14,7 +14,7 @@ const Body = () => {
 
 			<div className='body-discover flex'>
 				<img
-					src={discover_weekly.images[0].url}
+					src={discover_weekly && discover_weekly.images[0].url}
 					alt=''
 					className='discover-img'
 				/>
@@ -34,10 +34,10 @@ const Body = () => {
 					<Icon icon='bi:three-dots' />
 				</div>
 
-				{discover_weekly?.tracks?.items.map(item => {
-					console.log("track -->", item.track);
-					return <SongItem track={item.track} id={item.id} />;
-				})}
+				{discover_weekly &&
+					discover_weekly.tracks?.items?.map(item => {
+						return <SongItem track={item.track} id={item.id} />;
+					})}
 			</div>
 		</section>
 	);

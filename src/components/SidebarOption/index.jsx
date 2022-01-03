@@ -5,8 +5,14 @@ import { Icon } from "@iconify/react";
 const SidebarOption = ({ title, icon }) => {
 	return (
 		<div className='sidebarOption-container'>
-			{icon && <Icon icon={icon} className='sidebarOption-icon' />}
-			{icon ? <h4>{title}</h4> : <p>{title}</p>}
+			{icon ? (
+				<>
+					<Icon icon={icon} className='sidebarOption-icon' />
+					<h4>{title}</h4>
+				</>
+			) : (
+				<p>{title}</p>
+			)}
 		</div>
 	);
 };

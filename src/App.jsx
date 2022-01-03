@@ -28,36 +28,29 @@ function App() {
 				type: "SET_SPOTIFY",
 				payload: spotify,
 			});
-		}
-	}, [token, dispatch]);
 
-	useEffect(() => {
-		if (spotify) {
-			spotify.getMe().then(res => {
-				console.log("get user", res);
-				return dispatch({
+			spotify.getMe().then(res =>
+				dispatch({
 					type: "GET_USER",
 					payload: res,
-				});
-			});
+				})
+			);
 
-			spotify.getUserPlaylists().then(res => {
-				console.log("get playlist", res);
-				return dispatch({
+			spotify.getUserPlaylists().then(res =>
+				dispatch({
 					type: "SET_PLAYLISTS",
-					payload: res,
-				});
-			});
+					payload: res.items,
+				})
+			);
 
-			spotify.getPlaylist("37i9dQZEVXcSvqjG5Dwwab").then(res => {
-				console.log("get playlist discover", res);
-				return dispatch({
+			spotify.getPlaylist("37i9dQZEVXcSvqjG5Dwwab").then(res =>
+				dispatch({
 					type: "SET_DISCOVER_WEEKLY",
 					payload: res,
-				});
-			});
+				})
+			);
 		}
-	}, [spotify, dispatch]);
+	}, [token, dispatch]);
 
 	return <div className='App'>{token ? <UserDashboard /> : <Login />}</div>;
 }
